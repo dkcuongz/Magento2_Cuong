@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>	
+		<add id="Blog_Post::post" 
+      	title="Post" 
+      	translate="title" 
+      	module="Blog_Post" 
+      	sortOrder="51" 
+      	dependsOnModule="Blog_Post" 
+      	resource="Blog_Post::post"/>
+
+        <add id="Blog_Post::contact" 
+      	title="Contact" 
+      	translate="title" 
+      	module="Blog_Post" 
+      	parent="Blog_Post::post" 
+      	sortOrder="10" 
+      	dependsOnModule="Blog_Post" 
+      	action="post/index/index" 
+      	resource="Blog_Post::contact"/>
+
+        <add id="Blog_Post::contact_config" 
+      	title="Configuration" 
+      	translate="title" 
+      	module="Blog_Post" 
+      	parent="Blog_Post::post" 
+      	sortOrder="10" 
+      	dependsOnModule="Blog_Post" 
+      	action="adminhtml/system_config/edit/section/post" 
+      	resource="Blog_Post::contact_config"/>
+        
+    </menu>
+</config>
