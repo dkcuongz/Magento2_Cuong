@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+    <script src="js/themeto-head.js"></script>
+    <script src="Magento_Cms::js/themeto-head2.js"></script>
+    </head>
+    <body>
+    <referenceContainer name="main">
+        <block class="Magento\Framework\View\Element\Template" name="themeto.init"  template="Magento_Cms::js/themeto-init.phtml" after="-" />
+    </referenceContainer>
+        <referenceContainer name="before.body.end">
+        <<block class="Magento\Theme\Block\Html\Footer" name="themeto.js" template="Magento_Cms::js/themeto-body.phtml" />
+        </referenceContainer>
+    </body>
+</page>
